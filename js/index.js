@@ -13,7 +13,7 @@ const siteContent = {
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
-  "main-content": {
+  "content": {
     "features-h4":"Features",
     "features-content": "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
     "about-h4":"About",
@@ -40,3 +40,61 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//the header
+let headerimage = document.getElementById("cta-img");
+headerimage.setAttribute('src', siteContent["cta"]["img-src"])
+
+//the middle image
+let middleimage = document.getElementById("middle-img");
+middleimage.setAttribute('src', siteContent["content"]["middle-img-src"])
+
+//Nav bar
+let nav = document.querySelectorAll('nav a')
+nav[0].textContent = siteContent.nav['nav-item-1']
+nav[1].textContent = siteContent.nav['nav-item-2']
+nav[2].textContent = siteContent.nav['nav-item-3']
+nav[3].textContent = siteContent.nav['nav-item-4']
+nav[4].textContent = siteContent.nav['nav-item-5']
+nav[5].textContent = siteContent.nav['nav-item-6']
+
+//Header words and start button 
+let header = document.querySelector('.cta h1')
+header.textContent = siteContent.cta['h1']
+header.style.display = 'coloumn'
+
+let button = document.querySelector('.cta-text button')
+button.textContent = siteContent.cta['button']
+
+//features and about section
+let top_h4 = document.querySelectorAll('.main-content .text-content h4')
+top_h4[0].textContent = siteContent.content['features-h4']
+top_h4[1].textContent = siteContent.content['about-h4']
+
+let topcontent = document.querySelectorAll('.main-content .text-content p')
+topcontent[0].textContent = siteContent.content['features-content']
+topcontent[1].textContent = siteContent.content['about-content']
+
+//service and product and vision portion
+let bottom_h4 = document.querySelectorAll('.bottom-content .text-content h4')
+bottom_h4[0].textContent = siteContent.content['services-h4']
+bottom_h4[1].textContent = siteContent.content['product-h4']
+bottom_h4[2].textContent = siteContent.content['vision-h4']
+
+let bottomcontent = document.querySelectorAll('.bottom-content .text-content p')
+bottomcontent[0].textContent = siteContent.content['services-content']
+bottomcontent[1].textContent = siteContent.content['product-content']
+bottomcontent[2].textContent = siteContent.content['vision-content']
+
+//contact info 
+let contact_h4 = document.querySelector('.contact h4')
+contact_h4.textContent = siteContent.contact['contact-h4'] 
+
+let contact = document.querySelectorAll('.contact p')
+contact[0].textContent = siteContent.contact['address']
+contact[1].textContent = siteContent.contact['phone']
+contact[2].textContent = siteContent.contact['email']
+
+//footer 
+let footer = document.querySelector('footer p')
+footer.textContent = siteContent.footer['copyright']
